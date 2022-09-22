@@ -9,4 +9,5 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN unzip awscliv2.zip
 RUN ./aws/install
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-RUN . ~/.nvm/nvm.sh && nvm install --lts
+RUN . ~/.nvm/nvm.sh && nvm install 12 && nvm alias default 12
+ENV PATH="${PATH}:/root/.nvm/versions/node/v12.22.12/bin"
