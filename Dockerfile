@@ -11,3 +11,4 @@ RUN ./aws/install
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 RUN . ~/.nvm/nvm.sh && nvm install 12 && nvm alias default 12
 ENV PATH="${PATH}:/root/.nvm/versions/node/v12.22.12/bin"
+RUN curl https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -o /usr/local/bin/yq && chmod +x /usr/local/bin/yq
